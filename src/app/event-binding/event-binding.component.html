@@ -1,0 +1,52 @@
+<p>event-binding works!</p>
+
+<section>
+    <button mat-button color="primary" (click)="save()">Save</button>
+    <button mat-button color="warn" (click)="inc()">{{buttonName}}</button>
+</section>
+
+<section>
+    <button mat-button color="primary" (click)="save()" [disabled]="!btnEnable">Mybutton 1</button>
+    <button mat-button color="warn" (click)="inc()" [disabled]="!btnEnable">Mybutton 2</button>
+
+    <button mat-button color="warn" (click)="disable()" [disabled]="!btnEnable">Disable</button>
+</section>
+
+<section>
+    <p>
+        <mat-checkbox color="warn" (change)="cbChange($event)">Disable / Enable</mat-checkbox>
+    </p>
+    <p>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Favorite food</mat-label>
+            <mat-select matNativeControl required
+            [disabled]="selectDisabled"
+            (selectionChange)="selectionChange($event)">
+              <mat-option value="1">Lanche</mat-option>
+              <mat-option value="2">Pizza</mat-option>
+              <mat-option value="3">Esfiha</mat-option>
+              <mat-option value="4">Strognoff</mat-option>
+            </mat-select>
+            
+          </mat-form-field>
+          <mat-card-actions>
+            <p>Selected option {{ selectedOption }}</p>
+        </mat-card-actions>
+    </p> 
+</section>
+
+<mat-divider></mat-divider>
+
+<section>
+    <p>
+        <mat-form-field>
+          <input matInput placeholder="First name" (input)="inputEvent($event)">
+          
+        </mat-form-field>
+        
+      </p>
+      <p>O que voce Digitou {{name}}</p>
+
+    
+</section>

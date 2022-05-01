@@ -1,0 +1,24 @@
+
+
+<mat-card class="mycard">
+    <mat-card-header>
+      <mat-card-title>Person data</mat-card-title>
+
+    </mat-card-header>
+    <mat-card-content>
+        <p>Primeiro nome: {{ person.primeironome }}</p>
+<p>Segundo nome: {{person.sobrenome}}</p>
+<p>Idade: {{person.idade}}</p>
+<p>Endereço {{person.endereco}}</p>
+<p>100+100 ={{ 100+100}}</p>
+<mat-form-field appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input matInput placeholder="Maria Eugenia" value="{{ person.primeironome }}">
+  </mat-form-field>
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>

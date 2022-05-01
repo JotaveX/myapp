@@ -1,0 +1,16 @@
+.input{
+    display: inline-flex;
+    flex-direction: column;
+}
+
+
+mat-checkbox{
+    padding: 10px;
+}
+
+mat-form-field{
+    width: 100%;
+}
+mat-card{
+    margin: 20px;
+}

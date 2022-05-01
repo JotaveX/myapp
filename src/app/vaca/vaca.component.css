@@ -1,0 +1,28 @@
+mat-card{
+    margin: 50px;
+}
+
+mat-form-field {
+    display: inline-flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+input {
+    display: inline-block;
+    width: 140px;
+    text-align: left;
+    }
+
+mat-checkbox{
+    display: inline-flex;
+    margin-left: 10px;
+}
+
+.vaca > p{
+    font-family:cursive;
+    margin-top: 5px;
+}
+
+
+

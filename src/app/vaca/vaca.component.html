@@ -1,0 +1,344 @@
+
+      <mat-card>
+        <mat-card-title>
+          Cadastro de Bovinos
+        </mat-card-title>
+          <mat-card-content>
+            <form>
+            Nome: 
+                  <mat-form-field>
+                  <input matInput placeholder="Nome da vaca" 
+                  [(ngModel)]="vaca.nome" name="nome">
+                  </mat-form-field>
+                  <br>
+                  Sexo: 
+                  <mat-form-field>
+                    
+                     <input matInput placeholder="Sexo da vaca"
+                      [(ngModel)]="vaca.sexo" name="sexo">
+                    
+
+                      </mat-form-field>
+                      <br>
+                  Nascimento: 
+                      <mat-form-field>
+                          <input matInput placeholder="Nascimento da vaca" type="date"
+                          [(ngModel)]="vaca.nasc" name="nasc">
+                          </mat-form-field>
+                          <br>
+                          Numero Brinco: 
+                  <mat-form-field>
+                      <input matInput placeholder="Numero do brinco" type="number"
+                      [(ngModel)]="vaca.numBrin" name="numbrin">
+                  </mat-form-field>
+                  <br>
+                  Código:  
+                  <mat-form-field>
+                  <input matInput placeholder="Codigo da vaca" type="number"
+                  [(ngModel)]="vaca.codigo" name="codigo">
+                  </mat-form-field>
+                  <br>
+                  Nome Pai:  
+                  <mat-form-field>
+                    
+                      <input matInput placeholder="Nome do pai"
+                      [(ngModel)]="vaca.pai" name="pai">
+                      </mat-form-field>
+                      <br>
+                  Nome mãe: 
+                      <mat-form-field>
+                          <input matInput placeholder="Nome da mae"
+                          [(ngModel)]="vaca.mae" name="mae">
+                          </mat-form-field>
+                          
+                          <br>
+                         Foto: 
+                  <mat-form-field>
+                      <input matInput>
+                  </mat-form-field>
+                  
+                  <br>
+                  Observações: 
+                      <mat-form-field>
+                          <input matInput placeholder="Observações..."
+                          [(ngModel)]="vaca.obs" name="obs">
+                          </mat-form-field>
+                        
+                        </form>   
+          </mat-card-content>
+          <mat-card-actions>
+          </mat-card-actions>
+          </mat-card>
+
+          
+      <mat-card>
+        <mat-card-title>
+          Eventos
+        </mat-card-title>
+        <br>
+          <mat-card-content>
+            <form>
+            Cio:  
+                  <mat-form-field>
+                  <input matInput placeholder="Data do inicio do cio" type="date"
+                  [(ngModel)]="cio" name="cio">
+                  </mat-form-field>
+                  <br><br>
+                  <mat-divider></mat-divider>
+                  <br>
+                  <h2>Inseminação</h2>
+                  
+                  Data:  
+                  <mat-form-field>
+                      <input matInput placeholder="Data da Inseminação" type="date"
+                      [(ngModel)]="inseminacao.inseminacao" name="inseminacao">
+                      </mat-form-field>
+                      <br>
+                      Touro:  
+                  <mat-form-field>
+                      <input matInput placeholder="Nome touro"
+                      [(ngModel)]="inseminacao.touro" name="touro">
+                      </mat-form-field>
+                      <br>
+                      Inseminador:  
+                  <mat-form-field>
+                      <input matInput placeholder="Nome Inseminador"
+                      [(ngModel)]="inseminacao.inseminador" name="inseminador">
+                      </mat-form-field>
+                      <br><br>
+                      <mat-divider></mat-divider>
+                      <br>
+                      <h2>Parto</h2>
+                  Data prevista:   
+                      <mat-form-field>
+                          <input matInput placeholder="Data prevista" type="date"
+                          [(ngModel)]="parto.parto_previsto" name="parto_previsto">
+                          </mat-form-field>
+                          <br>
+                  Data ocorrida* :
+                  <mat-form-field>
+                      <input matInput placeholder="Data ocorrida" type="date"
+                      [(ngModel)]="parto.parto" name="parto">
+                  </mat-form-field>
+                  <br>
+                  <!-- Sucesso:   
+                 <mat-form-field>
+                    <p>
+                      <mat-checkbox color="warn">Disable / Enable</mat-checkbox>
+                  </p>
+                  </mat-form-field>-->
+                  <br>
+                  Sexo filhote:   
+                  <mat-form-field>
+                      <input matInput placeholder="sexo filhote"
+                      [(ngModel)]="parto.sexo_filhote" name="sexo_filhote">
+                      </mat-form-field>     
+                          <br><br>
+                          <mat-divider></mat-divider>
+                          <br>
+                          <h2>Medicação</h2>
+                         Data:  
+                  <mat-form-field>
+                      <input matInput placeholder="Data medicação" type="date"
+                      [(ngModel)]="medicacao.medicamento_data" name="medicamento_data">
+                  </mat-form-field>
+                  
+                  <br>
+                  Medicamento: 
+                      <mat-form-field>
+                          <input matInput placeholder="Nome medicamento"
+                          [(ngModel)]="medicacao.medicamento" name="medicamento_nome">
+                          </mat-form-field>
+                          <br>
+                  Aplicador: 
+                      <mat-form-field>
+                          <input matInput placeholder="Nome Aplicador"
+                          [(ngModel)]="medicacao.aplicador" name="aplicador">
+                          </mat-form-field>
+                          <br><br>
+                          <mat-divider></mat-divider>
+                          <br>
+                          <h2>Vacinação</h2>
+                         Data:  
+                  <mat-form-field>
+                      <input matInput placeholder="Data vacinação" type="date"
+                      [(ngModel)]="vacinacao.data_vacinacao" name="agendadavac">
+                  </mat-form-field>
+                  
+                  <br>
+                  Vacina: 
+                      <mat-form-field>
+                          <input matInput placeholder="Nome vacina"
+                          [(ngModel)]="vacinacao.vacina" name="vacina">
+                          </mat-form-field>
+                          <br>
+                  Vacinador: 
+                      <mat-form-field>
+                          <input matInput placeholder="Nome vacinador"
+                          [(ngModel)]="vacinacao.vacinador" name="vacinador">
+                          </mat-form-field>
+                        </form>   
+                        
+          </mat-card-content>
+          <mat-card-actions>
+          </mat-card-actions>
+          </mat-card>
+
+          <mat-card>
+            <mat-card-title>
+              Registro de produção: 
+            </mat-card-title>
+            <br>
+              <mat-card-content>
+                <form>
+                Qual forma de registro deseja escolher:  
+                      <mat-form-field>
+                        <input matInput placeholder="Enter your last name"
+                        [(ngModel)]="producao.forma" name="forma">
+                      </mat-form-field>
+                      <br>
+                      Quantos Litros foi retirado: 
+                      <mat-form-field>
+                          <input matInput placeholder="Quantidade de Litros" type="number"
+                          [(ngModel)]="producao.litros" name="litros">
+                          </mat-form-field>
+                          <br><br>
+                          <mat-divider></mat-divider>
+                          <br>
+                          Peso: 
+                      <mat-form-field>
+                          <input matInput placeholder="Quantidade de peso" type="number"
+                          [(ngModel)]="producao.peso" name="peso">
+                          </mat-form-field>
+                          <br>
+                          Altura: 
+                      <mat-form-field>
+                          <input matInput placeholder="Altura" type="number"
+                          [(ngModel)]="producao.altura" name="">
+                          </mat-form-field>
+                          <br>
+                         Score corporal:  
+                      <mat-form-field>
+                          <input matInput placeholder="Score corporal" type="number"
+                          [(ngModel)]="producao.score" name="score">
+                          </mat-form-field>
+                            </form>   
+              </mat-card-content>
+              <mat-card-actions> 
+              </mat-card-actions>
+              </mat-card>
+
+              <mat-card>
+                <mat-card-title>Resultados</mat-card-title>
+                <mat-card-content>
+                    <br>
+                    <section>
+                        <p><mat-checkbox [(ngModel)]="showVaca" name="showVaca">Vaca</mat-checkbox></p>
+                        <p><mat-checkbox [(ngModel)]="showInseminacao" name="showInseminacao">Inseminação</mat-checkbox></p>
+                        <p><mat-checkbox [(ngModel)]="showParto" name="showParto">Parto</mat-checkbox></p>
+                        <p><mat-checkbox [(ngModel)]="showMedicacao" name="showMedicacao">Medicação</mat-checkbox></p>
+                        <p><mat-checkbox [(ngModel)]="showVacinacao" name="showVacinacao">Vacinação</mat-checkbox></p>
+                        <p><mat-checkbox [(ngModel)]="showProducao" name="showProducao">Produção</mat-checkbox></p>
+                      </section>
+                </mat-card-content>
+                <mat-card-actions>
+                </mat-card-actions>
+              </mat-card>
+
+              <mat-card *ngIf="showVaca">
+                  <mat-card-content class="vaca">
+                <p>Nome: {{vaca.nome}}</p>
+                <br>
+                
+                <p>Sexo: {{vaca.sexo}}</p>
+                <br>
+               
+                <p>Nascimento: {{vaca.nasc}}</p>
+                <br>
+                
+                <p>Numero Brinco: {{vaca.numBrin}}</p>
+                <br>
+                
+                <p>Codigo: {{vaca.codigo}}</p>
+                <br>
+                
+                <p>Nome pai: {{vaca.pai}}</p>
+                <br>
+                
+                <p>Nome mãe: {{vaca.mae}}</p>
+                <br>
+                
+                <p>Observações {{vaca.obs}}</p>
+            </mat-card-content>
+              </mat-card>
+
+              <mat-card *ngIf="showInseminacao">
+                <mat-card-content class="vaca">
+              <p>Data inseminação: {{inseminacao.inseminacao}}</p>
+              <br>
+              
+              <p>Nome touro: {{inseminacao.touro}}</p>
+              <br>
+             
+              <p>Inseminador: {{inseminacao.inseminador}}</p>
+          </mat-card-content>
+            </mat-card>
+
+            <mat-card *ngIf="showParto">
+              <mat-card-content class="vaca">
+            <p>Data parto previsto: {{parto.parto_previsto}}</p>
+            <br>
+            
+            <p>Data parto: {{parto.parto}}</p>
+            <br>
+           
+            <p>Sexo filhote: {{parto.sexo_filhote}}</p>
+        </mat-card-content>
+          </mat-card>
+
+                        <mat-card *ngIf="showMedicacao">
+                <mat-card-content class="vaca">
+              <p>Data medicamento: {{medicacao.medicamento_data}}</p>
+              <br>
+              
+              <p>Medicamento: {{medicacao.medicamento}}</p>
+              <br>
+             
+              <p>Aplicador: {{medicacao.aplicador}}</p>
+          </mat-card-content>
+            </mat-card>
+
+            <mat-card *ngIf="showVacinacao">
+              <mat-card-content class="vaca">
+            <p>Data vacinação: {{vacinacao.data_vacinacao}}</p>
+            <br>
+            
+            <p>Vacina: {{vacinacao.vacina}}</p>
+            <br>
+           
+            <p>Vacinador: {{vacinacao.vacinador}}</p>
+        </mat-card-content>
+          </mat-card>
+
+          <mat-card *ngIf="showProducao">
+            <mat-card-content class="vaca">
+          <p>Forma: {{producao.forma}}</p>
+          <br>
+          
+          <p>Litros retirados: {{producao.litros}}</p>
+          <br>
+         
+          <p>Peso: {{producao.peso}}</p>
+          <br>
+         
+          <p>Altura: {{producao.altura}}</p>
+          <br>
+         
+          <p>Score: {{producao.score}}</p>
+      </mat-card-content>
+        </mat-card>
+            
+             
+
+              
+          
