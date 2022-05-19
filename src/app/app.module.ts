@@ -31,6 +31,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { Routes, RouterModule } from '@angular/router';
+import { NgswhichComponent } from './ngswhich/ngswhich.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { NgTemplateComponent } from './ng-template/ng-template.component';
+import { NgcontainerComponent } from './ngcontainer/ngcontainer.component';
+import { NgContentComponent } from './ng-content/ng-content.component';
 
 const routes: Routes = [
   { path: 'app-vaca', component: VacaComponent },
@@ -51,7 +56,11 @@ const routes: Routes = [
     NgClassComponent,
     NgIfComponent,
     VacaComponent,
-    MainNavComponent
+    MainNavComponent,
+    NgswhichComponent,
+    NgTemplateComponent,
+    NgcontainerComponent,
+    NgContentComponent
   ],
   imports: [
     BrowserModule,
@@ -71,6 +80,7 @@ const routes: Routes = [
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
+    MatProgressBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
