@@ -36,6 +36,12 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { NgTemplateComponent } from './ng-template/ng-template.component';
 import { NgcontainerComponent } from './ngcontainer/ngcontainer.component';
 import { NgContentComponent } from './ng-content/ng-content.component';
+import { InputBindingComponent } from './input-binding/input-binding.component';
+import { EventComponent } from './event/event.component';
+import { ChildItemComponent } from './event/child-item/child-item.component';
+import { ClientsComponent } from './clients/clients.component';
+import { ItemClientComponent } from './clients/item-client/item-client.component';
+
 
 const routes: Routes = [
   { path: 'app-vaca', component: VacaComponent },
@@ -60,7 +66,12 @@ const routes: Routes = [
     NgswhichComponent,
     NgTemplateComponent,
     NgcontainerComponent,
-    NgContentComponent
+    NgContentComponent,
+    InputBindingComponent,
+    EventComponent,
+    ChildItemComponent,
+    ClientsComponent,
+    ItemClientComponent,
   ],
   imports: [
     BrowserModule,
